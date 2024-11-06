@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "ERP Count",
+    "version": "1.0",
+    "description": "Get number of students for each course",
+    "permissions": ["tabs","activeTab", "scripting"],
+    "host_permissions": ["*://erp.iitj.ac.in/IIT_ERP3/showmenu.htm*"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "favicon.png",   
+        "48": "favicon.png",
+        "128": "favicon.png"
+      }
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://erp.iitj.ac.in/IIT_ERP3/showmenu.htm*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
